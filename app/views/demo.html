@@ -1,18 +1,59 @@
-<div class="container-fluid">
-    <div class="col-md-3 sidebar sidebar-left sidebar-md-show">
-        <ul class="nav navbar-stacked">
-            <li class="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-    <div class="main col-md-9 col-md-offset-3">
-        <p>main</p>
+<style>
+ul.nav.nav-stacked {
+    background-color: #146A87;    
+}
+ul.nav.nav-stacked a {
+    color: #009E32;
+}
+ul.nav.nav-stacked > li > a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500
+}
+ul.nav.nav-stacked a:hover,
+ul.nav.nav-stacked a:focus {
+    background-color: #002B3A;
+}
+ul.nav.nav-stacked > li.active > a, 
+ul.nav.nav-stacked > li.active > a:hover,
+ul.nav.nav-stacked > li.active > a:focus {
+    background-color: #002B3A;  
+}
+ul.subCates {
+    background-color: #004860;
+}
+ul.subCates > li > a {
+    padding-left: 30px;
+}
+ul.subCates > li.active > a,
+ul.subCates > li.active > a:hover,
+ul.subCates > li.active > a:focus {
+    background-color: #002B3A; 
+}
+
+</style>
+<div class="contailer">
+    <div class="row">
+        <div class="col-sm-3">
+            <ul id="demo-nav" class="nav nav-stacked">
+                <li ng-repeat="chartCate in demos.chartCates track by chartCate.id">
+                    <a role="button" data-toggle="collapse" data-target="#group-{{::chartCate.id}}" data-parent="#demo-nav">{{::chartCate.name}}</a>
+                    <ul id="group-{{::chartCate.id}}" class="nav subCates">
+                        <li ng-repeat="item in chartCate.subItems">
+                            <a ui-sref="{{::item.state}}">{{::item.title}}</a>
+                        </li>    
+                    </ul>    
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <ul class="nav nav-tabs">
+                <li><a href="">Default</a></li>
+                <li><a href="">Dark Unica</a></li>
+                <li><a href="">Sand Signika</a></li>
+                <li><a href="">Grid Light</a></li>
+            </ul>
+            <div ui-view></div>
+        </div>
     </div>
 </div>

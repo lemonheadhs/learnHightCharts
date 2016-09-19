@@ -14,17 +14,36 @@
         return directive;
 
         function link(scope, elem, attrs) {
-            var options = 
+            var propVal = 
                 angular.extend({}, 
                     $parse(attrs['highChartAttach'])(scope)
                 );
-            var chartOpt = options.chart || (options.chart = {});
-            chartOpt.renderTo = elem[0];
-            var chart = new Highcharts.Chart(options);
-            elem.data('chart', chart);
+            var chart;
+            console.log(angular.isFunction(propVal.then))
+            if (angular.isFunction(propVal.then)) {
+                propVal.then(function (data) {
+                    generateChart(data);
+                });
+            } else {
+                generateChart(propVal);
+            }
+
+            function generateChart(options) {
+                console.log('generating chart..')
+                var chartOpt;
+                chartOpt = options.chart || (options.chart = {});
+                chartOpt.renderTo = elem[0];
+                chart = new Highcharts.Chart(options);
+                elem.data('chart', chart);
+            }
 
             scope.$on('$destroy', function () {
                 elem.data('chart', undefined);
+                chart.destroy();
+                var idx = Highcharts.charts.indexOf(undefined);
+                if (idx >= 0) {
+                    Highcharts.charts.splice(idx, 1);
+                }
                 chart = undefined;
             });
         }
