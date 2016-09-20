@@ -3,20 +3,7 @@
 
     angular
         .module('learnHighChartsApp')
-        .component('zoomableExample', zoomableExample());
-
-    function zoomableExample() {
-        return {
-            template: '<div high-chart-attach="chart.options" style="width:100%; height:400px;"></div>',
-            controller: zoomableCtrl,
-            controllerAs: 'chart'
-        };
-    }
-
-    function zoomableCtrl() {
-        var ctrl = this;
-
-        ctrl.options = {
+        .component('zoomableExample', lemonUtils.simpleChartBuilder({
             chart: {
                 zoomType: 'x'
             },
@@ -179,6 +166,6 @@
                     0.714, 0.7119, 0.7129, 0.7129, 0.7049, 0.7095
                 ]
             }]
-        };
-    }
+        }));
+    
 })();

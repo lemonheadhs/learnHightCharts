@@ -38,7 +38,7 @@ ul.subCates > li.active > a:focus {
             <ul id="demo-nav" class="nav nav-stacked">
                 <li ng-repeat="chartCate in demos.chartCates track by chartCate.id">
                     <a role="button" data-toggle="collapse" data-target="#group-{{::chartCate.id}}" data-parent="#demo-nav">{{::chartCate.name}}</a>
-                    <ul id="group-{{::chartCate.id}}" class="nav subCates">
+                    <ul id="group-{{::chartCate.id}}" class="nav subCates collapse">
                         <li ng-repeat="item in chartCate.subItems">
                             <a ui-sref="{{::item.state}}">{{::item.title}}</a>
                         </li>    

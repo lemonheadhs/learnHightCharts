@@ -3,20 +3,7 @@
 
     angular
         .module('learnHighChartsApp')
-        .component('withLabelExample', dataLabelExample());
-
-    function dataLabelExample() {
-        return {
-            template: '<div high-chart-attach="chart.options" style="width:100%; height:400px;"></div>',
-            controller: dataLabelCtrl,
-            controllerAs: 'chart'
-        };
-    }
-
-    function dataLabelCtrl() {
-        var ctrl = this;
-
-        ctrl.options = {
+        .component('withLabelExample', lemonUtils.simpleChartBuilder({
             chart: {
                 type: 'line'
             },
@@ -49,6 +36,6 @@
                 name: 'London',
                 data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
             }]
-        };
-    }
+        }));
+    
 })();

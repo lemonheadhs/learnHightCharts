@@ -15,10 +15,9 @@
 
         function link(scope, elem, attrs) {
             var propVal = 
-                angular.extend({}, 
-                    $parse(attrs['highChartAttach'])(scope)
-                );
+                $parse(attrs['highChartAttach'])(scope);
             var chart;
+            
             console.log(angular.isFunction(propVal.then))
             if (angular.isFunction(propVal.then)) {
                 propVal.then(function (data) {

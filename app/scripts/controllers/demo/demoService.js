@@ -56,9 +56,23 @@
         { title: 'ajax loaded data, clickable points', state: 'root.demo.1-ajax' },
         { title: 'with data label', state: 'root.demo.1-datalabel' },
         { title: 'time series, zoomable', state: 'root.demo.1-zoomable' },
+        { title: 'spline with inverted', state: 'root.demo.1-splineinverted' },
+        { title: 'spline with symbols', state: 'root.demo.1-splinesymbols' },
+        { title: 'spline with plot bands', state: 'root.demo.1-splineband' },
+        { title: 'time data with irregular intervals', state: 'root.demo.1-irregular-time-intervals' },
+        { title: 'logarithmic axis', state: 'root.demo.1-logarithmicaxis' },
     ];
     var areaCharts = [
-        { title: 'basic area', state: 'root.demo.2_basicarea' }
+        { title: 'basic area', state: 'root.demo.2-basicarea' },
+        { title: 'area range and line', state: 'root.demo.2-rangeline' },
+        { title: 'area range', state: 'root.demo.2-range' },
+        { title: 'area spline', state: 'root.demo.2-spline' },
+        { title: 'inverted axes', state: 'root.demo.2-invertedaxes' },
+        { title: 'area with missing points', state: 'root.demo.2-missingpoints' },
+        { title: 'percentage area', state: 'root.demo.2-percentage' },
+        { title: 'stacked area', state: 'root.demo.2-stacked' },
+        { title: 'area with negative values', state: 'root.demo.2-negative' },
+        { title: 'sparkline charts', state: 'root.demo.2-sparkline' },
     ];
 
     var subCates = {

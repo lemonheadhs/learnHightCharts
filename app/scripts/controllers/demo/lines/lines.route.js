@@ -37,5 +37,45 @@
                         }
                     }
                 })
+                .state('root.demo.1-splineinverted', {
+                    url: '/1/splineinverted',
+                    views: {
+                        '@root.demo': {
+                            template: '<spline-inverted></spline-inverted>'
+                        }
+                    }
+                })
+                .state('root.demo.1-splinesymbols', {
+                    url: '/1/splinesymbols',
+                    views: {
+                        '@root.demo': {
+                            template: '<spline-symbols></spline-symbols>'
+                        }
+                    }
+                })
+                .state('root.demo.1-splineband', {
+                    url: '/1/splineband',
+                    views: {
+                        '@root.demo': {
+                            template: '<spline-band></spline-band>'
+                        }
+                    }
+                })
+                .state('root.demo.1-irregular-time-intervals', {
+                    url: '/1/irregular-time-intervals',
+                    views: {
+                        '@root.demo': {
+                            template: '<irregular-time-intervals></irregular-time-intervals>'
+                        }
+                    }
+                })
+                .state('root.demo.1-logarithmicaxis', {
+                    url: '/1/logarithmicaxis',
+                    views: {
+                        '@root.demo': {
+                            template: '<logarithmic-axis></logarithmic-axis>'
+                        }
+                    }
+                })
         });
 })();
