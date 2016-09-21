@@ -74,10 +74,17 @@
         { title: 'area with negative values', state: 'root.demo.2-negative' },
         { title: 'sparkline charts', state: 'root.demo.2-sparkline' },
     ];
+    var columnAndBar = [
+        { title: 'basic bar', state: 'root.demo.3-basicbar' },
+        //{ title: 'data from a html table', state: 'root.demo.3-tabledata' },
+        { title: 'fixed placement column', state: 'root.demo.3-fixedplacement' },
+        { title: 'column with drilldown', state: 'root.demo.3-drilldown' },
+    ];
 
     var subCates = {
         1: basicLines,
-        2: areaCharts
+        2: areaCharts,
+        3: columnAndBar
     };
     
 })();

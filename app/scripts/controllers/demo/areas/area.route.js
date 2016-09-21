@@ -73,7 +73,7 @@
                     url: '/2/sparkline',
                     views: {
                         '@root.demo': {
-                            template: '<area-sparkline></area-sparkline>'
+                            template: '<sparkline-charts></sparkline-charts>'
                         }
                     }
                 })

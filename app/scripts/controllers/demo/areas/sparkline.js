@@ -3,10 +3,11 @@
 
     angular
         .module('learnHighChartsApp')
-        component('sparklineCharts', sparklineCharts());
+        .component('sparklineCharts', sparklineCharts());
 
     function sparklineCharts() {
         return {
+            templateUrl: 'views/sparkline.html',
             controller: sparklineCtrl
         };
     }
