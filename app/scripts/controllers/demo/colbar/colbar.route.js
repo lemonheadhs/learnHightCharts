@@ -37,5 +37,77 @@
                         }
                     }
                 })
+                .state('root.demo.3-rotatedlabel', {
+                    url: '/3/rotatedlabel',
+                    views: {
+                        '@root.demo': {
+                            template: '<rotated-label></rotated-label>'
+                        }
+                    }
+                })
+                .state('root.demo.3-stacked-percentage', {
+                    url: '/3/stacked-percentage',
+                    views: {
+                        '@root.demo': {
+                            template: '<column-stacked-percentage></column-stacked-percentage>'
+                        }
+                    }
+                })
+                .state('root.demo.3-stackedgrouped', {
+                    url: '/3/stackedgrouped',
+                    views: {
+                        '@root.demo': {
+                            template: '<stacked-grouped></stacked-grouped>'
+                        }
+                    }
+                })
+                .state('root.demo.3-stackedcolumn', {
+                    url: '/3/stackedcolumn',
+                    views: {
+                        '@root.demo': {
+                            template: '<column-stacked></column-stacked>'
+                        }
+                    }
+                })
+                .state('root.demo.3-negative', {
+                    url: '/3/negative',
+                    views: {
+                        '@root.demo': {
+                            template: '<column-negative></column-negative>'
+                        }
+                    }
+                })
+                .state('root.demo.3-basiccolumn', {
+                    url: '/3/basiccolumn',
+                    views: {
+                        '@root.demo': {
+                            template: '<basic-column></basic-column>'
+                        }
+                    }
+                })
+                .state('root.demo.3-bar-negative-stack', {
+                    url: '/3/bar-negative-stack',
+                    views: {
+                        '@root.demo': {
+                            template: '<bar-negative-stack></bar-negative-stack>'
+                        }
+                    }
+                })
+                .state('root.demo.3-stackedbar', {
+                    url: '/3/stackedbar',
+                    views: {
+                        '@root.demo': {
+                            template: '<bar-stacked></bar-stacked>'
+                        }
+                    }
+                })
+                .state('root.demo.3-range', {
+                    url: '/3/range',
+                    views: {
+                        '@root.demo': {
+                            template: '<column-range></column-range>'
+                        }
+                    }
+                })
         })
 })();

@@ -3,9 +3,9 @@
 
     angular
         .module('learnHighChartsApp')
-        .component('columnDrilldonw', columnDrilldonw());
+        .component('columnDrilldown', columnDrilldown());
 
-    function columnDrilldonw() {
+    function columnDrilldown() {
         return {
             templateUrl: 'views/drilldown.html',
             controller: drilldownCtrl,
@@ -28,7 +28,7 @@
             if (!rows) return;
 
             var brandDatas =
-                R.map(parseToBrandData, rows);
+                R.map(parseToBrandData, R.tail(rows));
             var groupsInPair =
                 R.pipe(
                     R.groupBy(R.prop('brand')),
@@ -36,6 +36,9 @@
                 )(brandDatas);
             var drilldownSeries = buildDrilldownSeries(groupsInPair);
             var brandSeries = R.map(addUp, groupsInPair);
+
+            console.log(drilldownSeries)
+            console.log(brandSeries)
 
             deferedOptions.resolve({
                 chart: {

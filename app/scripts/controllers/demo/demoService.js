@@ -79,12 +79,27 @@
         //{ title: 'data from a html table', state: 'root.demo.3-tabledata' },
         { title: 'fixed placement column', state: 'root.demo.3-fixedplacement' },
         { title: 'column with drilldown', state: 'root.demo.3-drilldown' },
+        { title: 'column with rotated label', state: 'root.demo.3-rotatedlabel' },
+        { title: 'stacked percentage column', state: 'root.demo.3-stacked-percentage' },
+        { title: 'stacked and grouped', state: 'root.demo.3-stackedgrouped' },
+        { title: 'stacked column', state: 'root.demo.3-stackedcolumn' },
+        { title: 'stacked with negative values', state: 'root.demo.3-negative' },
+        { title: 'basic column', state: 'root.demo.3-basiccolumn' },
+        { title: 'bar with negative stack', state: 'root.demo.3-bar-negative-stack' },
+        { title: 'stacked bar', state: 'root.demo.3-stackedbar' },
+        { title: 'column range', state: 'root.demo.3-range' },
+    ];
+    var pies = [
+        { title: 'basic pie', state: 'root.demo.4-basicpie' },
+        { title: 'pie with legend', state: 'root.demo.4-legend' },
+        { title: 'donut chart', state: 'root.demo.4-donut' },
     ];
 
     var subCates = {
         1: basicLines,
         2: areaCharts,
-        3: columnAndBar
+        3: columnAndBar,
+        4: pies
     };
     
 })();
