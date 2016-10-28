@@ -78,14 +78,15 @@
                 R.map(function (item) {
                     var accum = 0;
                     var colors = 
-                        R.repeat(
-                            brightenColor(item.color, 0.2*(item.categories.length - (accum++))),
+                        R.times(
+                            function () {
+                                return brightenColor(item.color, 0.2*(1 - (accum++)/item.categories.length))
+                            },
                             item.categories.length
                         );
                     return R.transpose([item.categories, item.data, colors]);
                 }),
-                R.tap(function (item) {console.log(item)}),
-                R.map(R.map(function (triple) {
+                R.chain(R.map(function (triple) {
                     return {
                         name: triple[0],
                         y: triple[1],
@@ -93,9 +94,6 @@
                     };
                 }))
             )(data);
-
-            console.log(versionsData)
-
 
             return {
                 chart: {

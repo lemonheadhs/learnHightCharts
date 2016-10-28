@@ -77,5 +77,13 @@
                         }
                     }
                 })
+                .state('root.demo.2-areaMixStack', {
+                    url: '/2/areaMixStack',
+                    views: {
+                        '@root.demo': {
+                            template: '<area-mix-stack></area-mix-stack>'
+                        }
+                    }
+                })
         })
 })();

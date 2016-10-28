@@ -73,6 +73,7 @@
         { title: 'stacked area', state: 'root.demo.2-stacked' },
         { title: 'area with negative values', state: 'root.demo.2-negative' },
         { title: 'sparkline charts', state: 'root.demo.2-sparkline' },
+        { title: 'area mix stack', state: 'root.demo.2-areaMixStack' },
     ];
     var columnAndBar = [
         { title: 'basic bar', state: 'root.demo.3-basicbar' },
