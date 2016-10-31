@@ -89,11 +89,15 @@
         { title: 'bar with negative stack', state: 'root.demo.3-bar-negative-stack' },
         { title: 'stacked bar', state: 'root.demo.3-stackedbar' },
         { title: 'column range', state: 'root.demo.3-range' },
+        { title: 'column mix stack', state: 'root.demo.3-mixstack' },
+        { title: 'column mix stack2', state: 'root.demo.3-mixstack2' },
+        { title: 'zoomable Y', state: 'root.demo.3-zoomabley' },
     ];
     var pies = [
         { title: 'basic pie', state: 'root.demo.4-basicpie' },
         { title: 'pie with legend', state: 'root.demo.4-legend' },
         { title: 'donut chart', state: 'root.demo.4-donut' },
+        { title: 'multi pies', state: 'root.demo.4-multipie' },
     ];
 
     var subCates = {

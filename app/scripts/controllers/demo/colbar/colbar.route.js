@@ -108,6 +108,30 @@
                             template: '<column-range></column-range>'
                         }
                     }
+                })                
+                .state('root.demo.3-mixstack', {
+                    url: '/3/mixstack',
+                    views: {
+                        '@root.demo': {
+                            template: '<col-mix-stack></col-mix-stack>'
+                        }
+                    }
+                })                
+                .state('root.demo.3-mixstack2', {
+                    url: '/3/mixstack2',
+                    views: {
+                        '@root.demo': {
+                            template: '<col-mix-stack2></col-mix-stack2>'
+                        }
+                    }
+                })                
+                .state('root.demo.3-zoomabley', {
+                    url: '/3/zoomabley',
+                    views: {
+                        '@root.demo': {
+                            template: '<zoomable-y></zoomable-y>'
+                        }
+                    }
                 })
         })
 })();

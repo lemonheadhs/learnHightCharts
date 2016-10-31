@@ -29,5 +29,13 @@
                         }
                     }
                 })
+                .state('root.demo.4-multipie', {
+                    url: '/4/multipie',
+                    views: {
+                        '@root.demo': {
+                            template: '<multi-pie></multi-pie>'
+                        }
+                    }
+                })
         })
 })();
